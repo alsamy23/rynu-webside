@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors from Stitch Preview */
+  --bg-main: #FAF9F6;
+  --bg-dark: #2C2621; /* Sanctuary Brown */
+  --bg-nav: #001F3D; /* Primary Navy */
+  --accent-teal: #0E6F76;
+  --text-dark: #1A1A1A;
+  --text-light: #64748B;
+  --text-white: #FFFFFF;
+  --border-light: #F2F2F2;
+  
+  /* Typography */
+  --font-serif: 'Lora', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Layout */
+  --section-padding: 100px;
+  --container-max: 1200px;
+  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+h1 i, h2 i, h3 i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--bg-nav);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-teal);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--bg-nav);
+  border: 1px solid var(--bg-nav);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-nav);
+  color: var(--text-white);
+}
+
+.btn-link {
+  background: none;
+  color: var(--bg-nav);
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* Sections */
+section {
+  padding: var(--section-padding) 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 31, 61, 0.05);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+  }
+}
